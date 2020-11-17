@@ -1,40 +1,33 @@
-const React = require('react');
-const ReactDom = require('react-dom');
-const {Router, Route, Link} = require('react-router');
-const ButtonPage = require('./buttons/buttons');
+const React = require("react");
+const ReactDom = require("react-dom");
+const { BrowserRouter, Route, Link } = require("react-router-dom");
+const ButtonPage = require("./buttons/buttons");
 
-const routers = [{label: 'ButtonPage', path: '/button'}]
-const textArr = [1, 2, 3]
-
+const routers = [{ label: "ButtonPage", path: "/button" }];
+const textArr = [1, 2, 3];
 
 class App extends React.Component {
-    render() {
-        return (
+  render() {
+    return (
+      <BrowserRouter>
         <div>
-            <span>Hello World</span>
-            <ul>
-                {
-                    textArr.map(val=>(
-                        <li key={val}>
-                            <a href='/'>HAHA</a>
-                        </li>
-                    ))
-                }
-            </ul>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            {routers.map((val) => (
+              <li>
+                <Link to={val.path}>{val.label}</Link>
+              </li>
+            ))}
+          </ul>
         </div>
-        )
-    }
+      </BrowserRouter>
+    );
+  }
 }
 
-export default App;
-
-function AppRoute() {
-    return <Router>
-        <Route path='/' component={App}></Route>
-    </Router>
-}
-
-
-ReactDom.render(
-    <AppRoute/>, document.getElementById('app')
-)
+ReactDom.render(<App />, document.getElementById("app"));
