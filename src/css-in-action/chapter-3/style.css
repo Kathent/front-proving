@@ -1,0 +1,89 @@
+:root {
+    background-color: grey;
+}
+
+/**,*/
+/*::before,*/
+/*::after {*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+.header {
+    background-color: #13a4a4;
+    border-radius: 1em;
+}
+
+.header h1 {
+    padding: 2em 1em;
+}
+
+.container {
+    display: flex;
+}
+
+.container .left {
+    background-color: #000011;
+    color: white;
+    border-radius: 0.5em;
+    margin: 2em 0.5em;
+    padding: 2em 0.5em;
+    flex: 5;
+}
+
+.container .right {
+    flex: 2;
+    background-color: #000011;
+    color: white;
+    border-radius: 0.5em;
+    margin: 2em 0.5em;
+    padding: 2em 0.5em;
+}
+
+.container .right div {
+    background-color: #13a4a4;
+    color: black;
+    text-align: center;
+    /*padding: 0.1em 0.1em;*/
+}
+
+.container .right > p {
+    color: #13a4a4;
+}
+
+
+/**css for book**/
+
+.container-from-book {
+    display: block;
+}
+
+.container-from-book .left {
+    float: left;
+    width: calc(70% - 2em);
+    background-color: #000011;
+    color: white;
+    border-radius: 0.5em;
+    margin: 2em 0.5em;
+    padding: 2em 0.5em;
+}
+
+.container-from-book .right {
+    float: left;
+    width: calc(30% - 2em);
+    background-color: #000011;
+    color: white;
+    border-radius: 0.5em;
+    margin: 2em 0.5em;
+    padding: 2em 0.5em;
+}
+
+.container-from-book .right div {
+    background-color: #13a4a4;
+    color: black;
+    text-align: center;
+    /*padding: 0.1em 0.1em;*/
+}
+
+.container-from-book .right > p {
+    color: #13a4a4;
+}

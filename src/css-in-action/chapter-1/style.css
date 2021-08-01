@@ -1,0 +1,81 @@
+h1 {
+    font-family: serif;
+    color: #2f4f4f;
+    margin-bottom: 10px;
+}
+
+.nav {
+    margin-top: 10px;
+    list-style: none;
+    padding-left: 0;
+}
+
+/*nav {*/
+/*    width: 50%;*/
+/*}*/
+
+#div-2 {
+    display: inline-block;
+}
+
+#main-nav-2 {
+    display: inline-block;
+}
+
+nav {
+    display: inline-block;   // inline-block   not occupy one line;
+}
+
+.nav li {
+    display: inline-block;
+}
+
+.special-item {
+    background-color: blue !important;   // important has higher priority
+}
+
+.nav a {
+    color: white;
+    background-color: #13a4a4;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#page-title {
+    font-family: sans-serif;
+}
+
+.title {
+    font-family: monospace;
+}
+
+a:link {
+    text-decoration: none;
+    color: orange;
+}
+
+a:visited{
+    color: purple;
+    text-decoration-style: solid ;
+}
+
+a:hover {
+    color: purple;
+    text-decoration-style: solid ;
+    display: none;
+    animation: ease-in-out 3s;
+}
+
+a:active {
+    color: navajowhite;
+}
+
+.footer {
+    text-align: center;
+    color: black;
+}
+
+.footer a {
+    color: inherit;
+}
