@@ -45,12 +45,34 @@ li a {
 }
 
 .column-big {
-    margin-top: 1em;
     background-color: #000011;
     color: white;
     margin-right: .5%;
     flex-direction: column;
-    flex: 4;
+    flex: 2;
+    display: flex;
+}
+
+.login-form h3 {
+    text-align: right;
+    text-transform: uppercase;
+    margin: .5em;
+    font-size: .9em;
+    font-weight: bold;
+}
+
+.login-form input:not([type=checkbox]):not([type=radio]) {
+    display: block;
+    width: 100%;
+    margin-top: 0;
+}
+
+.login-form button {
+    margin-top: 1em;
+    border: 1px solid #cc6b5a;
+    background-color: white;
+    padding: .5em 1em;
+    cursor: pointer;
 }
 
 .main {
@@ -76,18 +98,59 @@ li a {
     padding-left: 0;
     color: white;
     flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
-/*body * + * {*/
-/*    margin-top: 1.5em;*/
-/*}*/
+body * + * {
+    margin-top: 1.5em;
+}
 
 .login {
-    height: 60%;
     background-color: #000011;
+    flex: 1;
 }
 
 .other {
-    height: 40%;
     background-color: #000011;
+    flex: 1;
+    text-align: center;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.cost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*line-height: .7em;*/
+}
+
+.cost > span {
+    margin-top: 0;
+}
+
+.cost-currency {
+    font-size: 2rem;
+}
+.cost-dollars {
+    font-size: 4rem;
+}
+.cost-cents {
+    font-size: 1.5rem;
+    align-self: flex-start;
+}
+.cta-button {
+    display: block;
+    color: white;
+    /*padding: 0 1em;*/
+    font-size: 1.8em;
+    text-decoration: none;
+    background-color: #cc6b5a;
+    margin: 1em 2em;
+}
+
+.cta-button p {
+    background-color: white;
 }
