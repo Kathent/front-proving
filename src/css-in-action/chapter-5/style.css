@@ -1,0 +1,93 @@
+body {
+    background-color: #2f4f4f;
+}
+
+:root {
+    box-sizing: border-box;
+}
+
+*,
+::before, ::after{
+    box-sizing: inherit;
+}
+
+.container {
+    margin: auto auto;
+}
+
+.nav {
+    background-color: pink;
+    padding: 0.2em 0;
+}
+
+ul > li + li {
+    margin-left: 1.5em;
+}
+
+ul {
+    list-style: none;
+}
+
+li:last-child {
+    /*margin-right: 1.5em;*/
+    float: right;
+}
+
+li {
+    display: inline-block;
+    padding: .5em 1em;
+    background-color: hotpink;
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+}
+
+.column-big {
+    margin-top: 1em;
+    background-color: #000011;
+    color: white;
+    margin-right: .5%;
+    flex-direction: column;
+    flex: 4;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+}
+
+.column-big h1 {
+    flex: 3;
+}
+
+.column-big p {
+    flex: 2;
+}
+
+.main > * + * {
+    margin-top: 0;
+    margin-left: 1.5em;
+}
+
+.column-small {
+    margin-left: 0;
+    padding-left: 0;
+    color: white;
+    flex: 1;
+}
+
+/*body * + * {*/
+/*    margin-top: 1.5em;*/
+/*}*/
+
+.login {
+    height: 60%;
+    background-color: #000011;
+}
+
+.other {
+    height: 40%;
+    background-color: #000011;
+}
