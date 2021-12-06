@@ -1,0 +1,37 @@
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+#ripple {
+  height: 60px;
+  width: 200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 2px;
+  border: 1px purple solid;
+  position: relative;
+  background-color: purple;
+  overflow: hidden;
+  color: white;
+}
+
+#ripple .circle {
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  position: absolute;
+
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple 0.3s ease-out;
+}
+
+@keyframes ripple {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
