@@ -1,48 +1,62 @@
-let left = document.getElementById("left-container");
-let right = document.getElementById("right-container");
+let slideLeft = document.getElementById("left-container");
+let slideRight = document.getElementById("right-container");
+let slidesLength = slideLeft.childElementCount;
 
-console.log("script");
+slideLeft.style.top = `-${(slidesLength - 1) * 100}vh`;
 
-if (left) {
-  left.onwheel = (ev) => {
-    console.log("ev is", ev);
-  };
-}
-
-let transformNum = 0;
-let running = false;
-if (right) {
-  right.onwheel = (ev) => {
+let delayEv = (f) => {
+  let running = 0;
+  return (ev) => {
     if (running) {
-      console.log("running....");
       return;
-    } else {
-      setTimeout(transform(ev), 2000);
     }
+
+    running++;
+    setTimeout(() => {
+      if (running > 1) {
+        return;
+      }
+      f(ev);
+      running--;
+    }, 800);
   };
-}
-
-let transform = (ev) => {
-  console.log("ev enter.....", running);
-  if (running) {
-    return;
-  }
-  if (ev.deltaY > 0) {
-    transformNum++;
-  } else if (ev.deltaY < 0) {
-    transformNum--;
-  }
-
-  if (transformNum < 0) {
-    transformNum = 0;
-  } else if (transformNum >= right.childElementCount) {
-    transformNum = right.childElementCount - 1;
-  }
-
-  for (let i = 0; i < right.childElementCount; i++) {
-    right.children[i].style.transform = `translate(0, ${-transformNum * 100}%)`;
-    right.children[i].style.transition = "transfrom 2s ease-in-out";
-  }
-  running = false;
 };
-// function transformEle(ele, )
+
+slideLeft.onwheel = delayEv((ev) => {
+  if (ev.target.deltaY > 0) {
+    changeSlide("down");
+  } else {
+    changeSlide("up");
+  }
+});
+
+slideRight.onwheel = delayEv((ev) => {
+  if (ev.target.deltaY > 0) {
+    changeSlide("down");
+  } else {
+    changeSlide("up");
+  }
+});
+
+let activeSlideIndex = 0;
+const changeSlide = (direction) => {
+  const sliderHeight = slideLeft.clientHeight;
+  if (direction === "up") {
+    activeSlideIndex++;
+    if (activeSlideIndex > slidesLength - 1) {
+      activeSlideIndex = 0;
+    }
+  } else if (direction === "down") {
+    activeSlideIndex--;
+    if (activeSlideIndex < 0) {
+      activeSlideIndex = slidesLength - 1;
+    }
+  }
+
+  slideRight.style.transform = `translateY(-${
+    activeSlideIndex * sliderHeight
+  }px)`;
+  slideLeft.style.transform = `translateY(${
+    activeSlideIndex * sliderHeight
+  }px)`;
+};
