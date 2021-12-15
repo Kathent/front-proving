@@ -15,6 +15,15 @@ body {
   text-align: center;
 }
 
+.remained {
+  display: flex;
+  flex: 1 0 auto;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .center {
   display: flex;
   justify-content: center;
@@ -44,6 +53,17 @@ body {
   color: #144fc6;
 }
 
+.consumed {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #144fc6;
+  width: 100%;
+  align-self: flex-end;
+  text-align: center;
+}
+
 .cup > span {
   display: block;
   color: #144fc6;
@@ -56,6 +76,7 @@ body {
   margin-top: 20px;
   margin-bottom: 40px;
   width: 280px;
+  text-align: center;
 }
 
 .cups > div {
