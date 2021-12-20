@@ -1,0 +1,59 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: whitesmoke;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#clock {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  border-color: black;
+  border-style: solid;
+}
+
+.needle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-style: none;
+}
+
+.hour {
+  width: 7px;
+  height: 50px;
+  transform-origin: top left;
+  background-color: black;
+}
+
+.minute {
+  width: 5px;
+  height: 70px;
+  transform-origin: top left;
+  background-color: black;
+}
+
+.second {
+  width: 3px;
+  height: 90px;
+  transform-origin: top left;
+  background-color: red;
+}
+
+.center-point {
+  background-color: #e74c3c;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
