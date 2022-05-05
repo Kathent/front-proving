@@ -17,6 +17,8 @@ let setTime = () => {
   hourE.style.transform = `translate(-50%, 0) rotate(${hourDeg}deg)`;
 };
 
+setTime();
+
 setInterval(() => {
   setTime();
-}, 1000);
+}, 100000);
