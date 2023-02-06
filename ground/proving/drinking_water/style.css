@@ -1,0 +1,88 @@
+* {
+  color: white;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3494e4;
+}
+
+.remained > span {
+  display: block;
+  color: #144fc6;
+  text-align: center;
+}
+
+.remained {
+  display: flex;
+  flex: 1 0 auto;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.big-cup {
+  width: 150px;
+  height: 330px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.cup {
+  border-radius: 0 0 15% 15%;
+  border-color: #144fc6;
+  border-style: solid;
+  border-width: 5px;
+  background-color: white;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  color: #144fc6;
+}
+
+.consumed {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #144fc6;
+  width: 100%;
+  align-self: flex-end;
+  text-align: center;
+}
+
+.cup > span {
+  display: block;
+  color: #144fc6;
+}
+
+.cups {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  width: 280px;
+  text-align: center;
+}
+
+.cups > div {
+  height: 95px;
+  width: 50px;
+  margin: 5px;
+  font-size: 14px;
+  text-align: center;
+}
