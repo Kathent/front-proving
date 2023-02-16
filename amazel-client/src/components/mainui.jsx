@@ -1,5 +1,7 @@
+import { Link, Outlet } from "react-router-dom";
+
 function MainUI() {
-    return <div className="drawer">
+    return <div className="drawer drawer-mobile bg-slate-300">
     <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
     <div className="drawer-content flex flex-col">
         <div className="w-full navbar bg-base-300">
@@ -10,12 +12,21 @@ function MainUI() {
             </div> 
             <div className="flex-1 px-2 mx-2">Amazel Client</div>
         </div>
+        <div className="container mx-auto text-center">
+          <Outlet/>
+        </div>
     </div> 
     <div className="drawer-side">
       <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
       <ul className="menu p-4 w-80 bg-base-100 text-base-content">
-        <li><a>Summary</a></li>
-        <li><a>Config</a></li>
+        <li><a>Amazl Client</a></li>
+        {/* <div className="divider"></div> */}
+        <li>
+          <Link to="/">Summary</Link>
+        </li>
+        <li>
+          <Link to="config">Config</Link>
+        </li>
       </ul>
     </div>
   </div>
